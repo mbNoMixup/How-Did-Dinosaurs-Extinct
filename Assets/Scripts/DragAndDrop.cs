@@ -8,11 +8,14 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     [SerializeField] private Canvas canvas;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
+    private Vector2 initPosition;
+    public int id;
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+        initPosition = transform.position;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -44,5 +47,10 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     {
         Debug.Log("OnDrop");
         throw new System.NotImplementedException();
+    }
+
+    public void ResetPosition()
+    {
+        transform.position = initPosition;
     }
 }
