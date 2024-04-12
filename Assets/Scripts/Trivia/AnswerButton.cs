@@ -21,13 +21,13 @@ public class AnswerButton : MonoBehaviour
 
     public void OnClick()
     {
-        if (isCorrect)
+        if (FindObjectOfType<QuestionSetup>().QuestionsAvailable)
         {
-            Debug.Log("CORRECT");
+            FindObjectOfType<QuestionSetup>().OnAnswer(isCorrect);
         }
         else
         {
-            Debug.Log("FALSE");
+            Debug.Log("No more questions available!");
         }
     }
 }

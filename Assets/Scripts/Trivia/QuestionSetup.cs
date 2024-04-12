@@ -14,10 +14,16 @@ public class QuestionSetup : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI categoryText;
     [SerializeField]
+    private TextMeshProUGUI scoreText;
+    [SerializeField]
     private AnswerButton[] answerButtons;
+    
+    private int score = 0;
 
     [SerializeField]
     private int correctAnswerChoice;
+
+    private bool questionsAvailable = true;
 
     private void Awake() 
     {
@@ -31,6 +37,11 @@ public class QuestionSetup : MonoBehaviour
         SetAnswerValues();    
     }
 
+    public bool QuestionsAvailable
+    {
+        get {return questionsAvailable;}
+    }
+
     private void GetQuestionAssets()
     {
         questions = new List<QuestionData>(Resources.LoadAll<QuestionData>("Questions"));
@@ -38,9 +49,17 @@ public class QuestionSetup : MonoBehaviour
 
     private void SelectNewQuestion()
     {
-        int randomQuestionIndex = Random.Range(0, questions.Count);
-        currentQuestion = questions[randomQuestionIndex];
-        questions.RemoveAt(randomQuestionIndex);
+        if (questions.Count > 0)
+        {
+            int randomQuestionIndex = Random.Range(0, questions.Count);
+            currentQuestion = questions[randomQuestionIndex];
+            questions.RemoveAt(randomQuestionIndex);
+        }
+        else
+        {
+            Debug.Log("No more questions!");
+            questionsAvailable = false;
+        }
     }
 
     private void SetQuestionValues()
@@ -88,5 +107,27 @@ public class QuestionSetup : MonoBehaviour
         }
 
         return newList;
+    }
+
+    public void OnAnswer(bool isCorrect)
+    {
+        if (isCorrect)
+        {
+            Debug.Log("CORRECT");
+            score += 100;
+            UpdateScoreText();
+            SelectNewQuestion();
+            SetQuestionValues();
+            SetAnswerValues();
+        }
+        else
+        {
+            Debug.Log("FALSE");
+        }
+    }
+
+    private void UpdateScoreText()
+    {
+        scoreText.text = "Score: " + score.ToString();
     }
 }
