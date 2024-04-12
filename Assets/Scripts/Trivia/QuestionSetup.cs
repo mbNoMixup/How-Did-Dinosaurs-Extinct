@@ -16,9 +16,16 @@ public class QuestionSetup : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI scoreText;
     [SerializeField]
+    private TextMeshProUGUI timerText;
+    [SerializeField]
     private AnswerButton[] answerButtons;
     
     private int score = 0;
+
+    [SerializeField]
+    private float timerDuration;
+    private float currentTimer;
+    private bool timerRunning = true;
 
     [SerializeField]
     private int correctAnswerChoice;
@@ -34,7 +41,9 @@ public class QuestionSetup : MonoBehaviour
     {
         SelectNewQuestion();
         SetQuestionValues();
-        SetAnswerValues();    
+        SetAnswerValues();
+        currentTimer = timerDuration;
+        StartCoroutine(StartTimer());    
     }
 
     public bool QuestionsAvailable
@@ -57,7 +66,7 @@ public class QuestionSetup : MonoBehaviour
         }
         else
         {
-            Debug.Log("No more questions!");
+            Debug.Log("NO MORE QUESTIONS!");
             questionsAvailable = false;
         }
     }
@@ -123,11 +132,42 @@ public class QuestionSetup : MonoBehaviour
         else
         {
             Debug.Log("FALSE");
+            currentTimer -= 10f;
+            UpdateTimerText();
         }
     }
 
     private void UpdateScoreText()
     {
         scoreText.text = "Score: " + score.ToString();
+    }
+
+    IEnumerator StartTimer()
+    {
+        while (timerRunning)
+        {
+            yield return new WaitForSeconds(1f);
+            currentTimer -= 1f;
+            UpdateTimerText();
+
+            if (currentTimer <= 0f)
+            {
+                Debug.Log("TIME IS UP!");
+                timerRunning = false;
+
+                foreach (var button in answerButtons)
+                {
+                    button.SetInteractable(false);
+                }
+            }
+        }
+    }
+
+    private void UpdateTimerText()
+    {
+        int minutes = Mathf.FloorToInt(Mathf.Clamp(currentTimer / 60, 0, Mathf.Infinity));
+        int seconds = Mathf.FloorToInt(Mathf.Clamp(currentTimer % 60, 0, Mathf.Infinity));
+
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }

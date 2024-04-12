@@ -9,6 +9,13 @@ public class AnswerButton : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI answerText;
 
+    private bool isInteractable = true;
+
+    public void SetInteractable(bool value)
+    {
+        isInteractable = value;
+    }
+
     public void SetAnswerText(string newText)
     {
         answerText.text = newText;
@@ -21,13 +28,16 @@ public class AnswerButton : MonoBehaviour
 
     public void OnClick()
     {
-        if (FindObjectOfType<QuestionSetup>().QuestionsAvailable)
+        if (isInteractable)
         {
-            FindObjectOfType<QuestionSetup>().OnAnswer(isCorrect);
-        }
-        else
-        {
-            Debug.Log("No more questions available!");
+            if (FindObjectOfType<QuestionSetup>().QuestionsAvailable)
+            {
+                FindObjectOfType<QuestionSetup>().OnAnswer(isCorrect);
+            }
+            else
+            {
+                Debug.Log("NO MORE QUESTIONS AVAILABLE!");
+            }
         }
     }
 }
