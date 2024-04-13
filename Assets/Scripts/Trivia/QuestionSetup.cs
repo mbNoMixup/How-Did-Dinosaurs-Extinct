@@ -46,6 +46,30 @@ public class QuestionSetup : MonoBehaviour
         StartCoroutine(StartTimer());    
     }
 
+    public void RestartGame()
+    {
+        score = 0;
+        currentTimer = timerDuration;
+        timerRunning = true;
+        questionsAvailable = true;
+
+        UpdateScoreText();
+        UpdateTimerText();
+
+        StopAllCoroutines();
+        StartCoroutine(StartTimer());
+
+        GetQuestionAssets();
+        foreach (var button in answerButtons)
+        {
+            button.SetInteractable(true);
+        }
+
+        SelectNewQuestion();
+        SetQuestionValues();
+        SetAnswerValues();
+    }
+
     public bool QuestionsAvailable
     {
         get {return questionsAvailable;}
@@ -134,6 +158,18 @@ public class QuestionSetup : MonoBehaviour
             Debug.Log("FALSE");
             currentTimer -= 10f;
             UpdateTimerText();
+        }
+
+        if (questions.Count == 0)
+        {
+            Debug.Log("ALL QUESTIONS ANSWERED!");
+            timerRunning = false;
+        }
+        else
+        {
+            SelectNewQuestion();
+            SetQuestionValues();
+            SetAnswerValues();
         }
     }
 
