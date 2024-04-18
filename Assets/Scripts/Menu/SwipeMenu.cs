@@ -21,7 +21,7 @@ public class SwipeMenu : MonoBehaviour, IEndDragHandler
     public void Awake()
     {
         currentPage = 1;
-        targetPos = CalculateTargetPosition(currentPage);
+        targetPos = menuRectTransform.localPosition;
         dragThreshold = Screen.width / 15;
         MovePage();
         UpdateArrowButton();
@@ -104,10 +104,5 @@ public class SwipeMenu : MonoBehaviour, IEndDragHandler
         {
             nextButton.interactable = false;
         }
-    }
-
-    Vector3 CalculateTargetPosition(int page)
-    {
-        return new Vector3(-page * pageStep.x, 0f, 0f);
     }
 }
