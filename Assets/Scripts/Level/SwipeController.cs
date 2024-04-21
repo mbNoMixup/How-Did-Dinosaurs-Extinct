@@ -57,7 +57,10 @@ public class SwipeController : MonoBehaviour, IEndDragHandler
 
         levelPagesRect.LeanMoveLocal(targetPos, tweenTime).setEase(tweenType).setOnComplete(() =>
         {
-            UpdateArrowButton();
+            LeanTween.delayedCall(1f, () =>
+            {
+                UpdateArrowButton();
+            });
         });
 
         UpdateBar();
