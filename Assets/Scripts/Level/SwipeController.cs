@@ -52,9 +52,15 @@ public class SwipeController : MonoBehaviour, IEndDragHandler
 
     void MovePage()
     {
-        levelPagesRect.LeanMoveLocal(targetPos, tweenTime).setEase(tweenType);
+        nextButton.interactable = false;
+        previousButton.interactable = false;
+
+        levelPagesRect.LeanMoveLocal(targetPos, tweenTime).setEase(tweenType).setOnComplete(() =>
+        {
+            UpdateArrowButton();
+        });
+
         UpdateBar();
-        UpdateArrowButton();
     }
 
     public void OnEndDrag(PointerEventData eventData)
