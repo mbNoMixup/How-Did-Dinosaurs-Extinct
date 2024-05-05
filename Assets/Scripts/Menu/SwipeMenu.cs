@@ -17,6 +17,7 @@ public class SwipeMenu : MonoBehaviour, IEndDragHandler
     float dragThreshold;
 
     [SerializeField] Button previousButton, nextButton;
+    bool isButtonClickable = true;
 
     public void Awake()
     {
@@ -29,22 +30,31 @@ public class SwipeMenu : MonoBehaviour, IEndDragHandler
 
     public void Next()
     {
-        if (currentPage < maxPage)
+        if (isButtonClickable && currentPage < maxPage)
         {
             currentPage++;
             targetPos += pageStep;
             MovePage();
+            StartCoroutine(EnableButtonAfterDelay());
         }
     }
 
     public void Previous()
     {
-        if (currentPage > 1)
+        if (isButtonClickable && currentPage > 1)
         {
             currentPage--;
             targetPos -= pageStep;
             MovePage();
+            StartCoroutine(EnableButtonAfterDelay());
         }
+    }
+
+    IEnumerator EnableButtonAfterDelay()
+    {
+        isButtonClickable = false;
+        yield return new WaitForSeconds(0.4f);
+        isButtonClickable = true;
     }
 
     void MovePage()
@@ -94,15 +104,7 @@ public class SwipeMenu : MonoBehaviour, IEndDragHandler
 
     void UpdateArrowButton()
     {
-        nextButton.interactable = true;
-        previousButton.interactable = true;
-        if (currentPage == 1)
-        {
-            previousButton.interactable = false;
-        }
-        else if (currentPage == maxPage)
-        {
-            nextButton.interactable = false;
-        }
+        nextButton.interactable = isButtonClickable && currentPage < maxPage;
+        previousButton.interactable = isButtonClickable && currentPage > 1;
     }
 }
