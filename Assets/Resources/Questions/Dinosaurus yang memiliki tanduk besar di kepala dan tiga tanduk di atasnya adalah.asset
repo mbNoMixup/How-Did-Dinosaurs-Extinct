@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0707cba9edf4aa44f871835ce81f6457, type: 3}
-  m_Name: QUESTION
+  m_Name: Dinosaurus yang memiliki tanduk besar di kepala dan tiga tanduk di atasnya
+    adalah
   m_EditorClassIdentifier: 
-  question: QUESTION
-  category: CATEGORY
+  question: Dinosaurus yang memiliki tanduk besar di kepala dan tiga tanduk di atasnya
+    adalah?
+  category: Herbivore
   answers:
-  - CORRECT ANSWER
-  - WRONG 1
-  - WRONG 2
-  - WRONG 3
+  - Triceratops
+  - Pterodactyl
+  - Stegosaurus
+  - Diplodocus

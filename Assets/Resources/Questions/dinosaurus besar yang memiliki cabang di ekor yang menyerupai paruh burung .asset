@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0707cba9edf4aa44f871835ce81f6457, type: 3}
-  m_Name: Test
+  m_Name: 'dinosaurus besar yang memiliki cabang di ekor yang menyerupai paruh burung '
   m_EditorClassIdentifier: 
-  question: Test?
-  category: Test
+  question: dinosaurus besar yang memiliki cabang di ekor yang menyerupai paruh burung
+    ?
+  category: Carnivore
   answers:
-  - Correct
-  - False 1
-  - False 2
-  - False 3
+  - Oviraptor
+  - Velociraptor
+  - Spinosaurus
+  - Dilophosaurus
