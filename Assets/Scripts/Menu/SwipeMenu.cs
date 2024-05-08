@@ -12,7 +12,7 @@ public class SwipeMenu : MonoBehaviour, IEndDragHandler
     [SerializeField] Vector3 pageStep;
     [SerializeField] RectTransform menuRectTransform;
 
-    [SerializeField] float tweenTime;
+    [SerializeField] float tweenTime; 
     [SerializeField] LeanTweenType tweenType;
     float dragThreshold;
 
