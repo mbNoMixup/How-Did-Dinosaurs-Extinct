@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
 
@@ -9,9 +10,16 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI puzzleFinishedText;
 
+    [SerializeField]
+    private GameObject _startingSceneTransition;
+    [SerializeField]
+    private GameObject _endingSceneTransition;
+
     private void Start()
     {
         puzzleFinishedText.gameObject.SetActive(false);
+        _startingSceneTransition.SetActive(true);
+        Invoke("DisableStartingSceneTransition", 5f);
     }
 
     public void PuzzlePiecePlaced()
@@ -65,5 +73,21 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
         puzzleFinishedText.gameObject.SetActive(true);
         puzzleFinishedText.text = "PUZZLE FINISHED!";
+    }
+
+    private void DisableStartingSceneTransition()
+    {
+        _startingSceneTransition.SetActive(false);
+    }
+    private void LoadNextLevel()
+    {
+        if (SceneManager.GetActiveScene().name == "2")
+        {
+            SceneManager.LoadScene("3");
+        }
+        else
+        {
+            SceneManager.LoadScene("2");
+        }
     }
 }

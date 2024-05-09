@@ -6,7 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< Updated upstream
     path: Assets/Scenes/FIxed Scenes/1 Main Menu.unity
+=======
+    path: Assets/Scenes/Testing Scenes/1.unity
+    guid: 277469b9e69ec9b47a87cccb430e83b7
+  - enabled: 1
+    path: Assets/Scenes/Testing Scenes/2.unity
+    guid: ab601de31b130fb4c9a84ca5967ae582
+  - enabled: 1
+    path: Assets/Scenes/Testing Scenes/3.unity
+    guid: 2dcf36bf8b9794043b0ed16e6375c69f
+  - enabled: 1
+    path: Assets/Scenes/Fixed Scenes/Main Menu.unity
+>>>>>>> Stashed changes
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/FIxed Scenes/2 Rundown.unity
