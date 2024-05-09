@@ -22,4 +22,9 @@ public class SceneLoader : MonoBehaviour
             Debug.LogWarning("No more scenes in build to load.");
         }
     }
+
+    public void LoadSceneByIndex(int buildIndex)
+    {
+        SceneManager.LoadScene(buildIndex);
+    }
 }

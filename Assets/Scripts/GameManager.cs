@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
 
@@ -8,18 +7,14 @@ public class GameManager : MonoBehaviour
 {
     public ItemSlot[] slots;
     [SerializeField]
-    private TextMeshProUGUI puzzleFinishedText;
-
-    [SerializeField]
-    private GameObject _startingSceneTransition;
-    [SerializeField]
-    private GameObject _endingSceneTransition;
+    private GameObject puzzleFinishedObject;
 
     private void Start()
     {
-        puzzleFinishedText.gameObject.SetActive(false);
-        _startingSceneTransition.SetActive(true);
-        Invoke("DisableStartingSceneTransition", 5f);
+        if (puzzleFinishedObject != null)
+        {
+            puzzleFinishedObject.SetActive(false);
+        }
     }
 
     public void PuzzlePiecePlaced()
@@ -28,12 +23,13 @@ public class GameManager : MonoBehaviour
         if (CheckAllPuzzlePiecesPlaced())
         {
             Debug.Log("ALL PIECES PLACED, CHECKING LEVEL");
-            StartCoroutine(ShowPuzzleFinishedText());
+            StartCoroutine(ShowPuzzleFinishedObject());
             CheckLevelFinished();
 
             if (CheckLevelFinished())
             {
                 Debug.Log("LEVEL FINISHED");
+                // Call your transition manager here if needed
             }
             else
             {
@@ -57,7 +53,7 @@ public class GameManager : MonoBehaviour
     public bool CheckLevelFinished()
     {
         Debug.Log("CHECKING LEVEL");
-        
+
         foreach (ItemSlot slot in slots)
         {
             if (!slot.IsCorrectPuzzlePiece())
@@ -68,26 +64,12 @@ public class GameManager : MonoBehaviour
         return true;
     }
 
-    private IEnumerator ShowPuzzleFinishedText()
+    private IEnumerator ShowPuzzleFinishedObject()
     {
         yield return new WaitForSeconds(3f);
-        puzzleFinishedText.gameObject.SetActive(true);
-        puzzleFinishedText.text = "PUZZLE FINISHED!";
-    }
-
-    private void DisableStartingSceneTransition()
-    {
-        _startingSceneTransition.SetActive(false);
-    }
-    private void LoadNextLevel()
-    {
-        if (SceneManager.GetActiveScene().name == "2")
+        if (puzzleFinishedObject != null)
         {
-            SceneManager.LoadScene("3");
-        }
-        else
-        {
-            SceneManager.LoadScene("2");
+            puzzleFinishedObject.SetActive(true);
         }
     }
 }
