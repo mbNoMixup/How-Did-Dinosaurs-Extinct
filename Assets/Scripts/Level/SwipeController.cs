@@ -55,15 +55,26 @@ public class SwipeController : MonoBehaviour, IEndDragHandler
         nextButton.interactable = false;
         previousButton.interactable = false;
 
+        SetChildAlpha(previousButton, 0.5f);
+        SetChildAlpha(nextButton, 0.5f);
+
         levelPagesRect.LeanMoveLocal(targetPos, tweenTime).setEase(tweenType).setOnComplete(() =>
         {
-            LeanTween.delayedCall(1f, () =>
+            LeanTween.delayedCall(0.6f, () =>
             {
                 UpdateArrowButton();
             });
         });
 
         UpdateBar();
+    }
+
+    void SetChildAlpha(Button button, float alpha)
+    {
+        foreach (Graphic graphic in button.GetComponentsInChildren<Graphic>())
+        {
+            graphic.canvasRenderer.SetAlpha(alpha);
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -98,13 +109,23 @@ public class SwipeController : MonoBehaviour, IEndDragHandler
     {
         nextButton.interactable = true;
         previousButton.interactable = true;
+
         if (currentPage == 1)
         {
             previousButton.interactable = false;
+            SetChildAlpha(previousButton, 0.5f);
+            SetChildAlpha(nextButton, 1f);
         }
         else if (currentPage == maxPage)
         {
             nextButton.interactable = false;
+            SetChildAlpha(nextButton, 0.5f);
+            SetChildAlpha(previousButton, 1f);
+        }
+        else if (currentPage != 1 && currentPage != maxPage)
+        {
+            SetChildAlpha(nextButton, 1f);
+            SetChildAlpha(previousButton, 1f);
         }
     }
 }
