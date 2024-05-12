@@ -1148,6 +1148,10 @@ PrefabInstance:
       value: Slot Green
       objectReference: {fileID: 0}
     - target: {fileID: 4319892580604343263, guid: 445fd7320c295c7478d0883a1e7672ab, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319892580604343263, guid: 445fd7320c295c7478d0883a1e7672ab, type: 3}
       propertyPath: m_Color.b
       value: 0.06738901
       objectReference: {fileID: 0}
