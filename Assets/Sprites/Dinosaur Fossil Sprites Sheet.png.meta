@@ -118,7 +118,7 @@ TextureImporter:
         width: 160
         height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,7 +139,7 @@ TextureImporter:
         width: 100
         height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
         width: 100
         height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,7 +181,7 @@ TextureImporter:
         width: 100
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,7 +202,7 @@ TextureImporter:
         width: 65
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,7 +223,7 @@ TextureImporter:
         width: 65
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,7 +244,7 @@ TextureImporter:
         width: 55
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,7 +265,7 @@ TextureImporter:
         width: 55
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,6 +273,636 @@ TextureImporter:
       bones: []
       spriteID: 2d254d31aad713b47a057786eafe0b37
       internalID: -1311728811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlotPiece4
+      rect:
+        serializedVersion: 2
+        x: 3608
+        y: 1091
+        width: 255
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0a92a7c66052a4899daced2e73fa76
+      internalID: 365449131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piece4
+      rect:
+        serializedVersion: 2
+        x: 3282
+        y: 1133
+        width: 165
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8204fadf4fef74f44adab556f20e64ca
+      internalID: 1735995495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlotPiece3
+      rect:
+        serializedVersion: 2
+        x: 3591
+        y: 1394
+        width: 355
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea4fe4347443a84cad775f4c875aa50
+      internalID: -724681387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piece3
+      rect:
+        serializedVersion: 2
+        x: 3276
+        y: 1441
+        width: 255
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 877f12e7fe6f97343b333b72ced75bb3
+      internalID: -547388492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlotPiece2
+      rect:
+        serializedVersion: 2
+        x: 3611
+        y: 1671
+        width: 320
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9dea7fb96050143b52a66d435e62bb
+      internalID: -1126086290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piece2
+      rect:
+        serializedVersion: 2
+        x: 3270
+        y: 1722
+        width: 240
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7430fbb98945e8149a684f58f1e8c7ef
+      internalID: 778497065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlotPiece1
+      rect:
+        serializedVersion: 2
+        x: 3631
+        y: 1955
+        width: 235
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcf4b9fd008da842a5bea66f7906118
+      internalID: 1725485268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piece1
+      rect:
+        serializedVersion: 2
+        x: 3296
+        y: 1996
+        width: 150
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd51e88fea349e04f91f476eec462d3f
+      internalID: -754514380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TyrannosaurusTail
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 2005
+        width: 265
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581d9442a3b19d94e93dd94ef6744aab
+      internalID: -1124627646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TyrannosaurusLegs
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1943
+        width: 210
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfbff244ded2ea4f9162a83f31c7bb3
+      internalID: -2097904254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TyrannosaurusThighs
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1930
+        width: 195
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68eb0bb03cf78e04190c4ead857221eb
+      internalID: -425305088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TyrannosaurusBody
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 1930
+        width: 335
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b15e1de5e19e49748bc6935397f18ee6
+      internalID: 1646698120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TyrannosaurusHead
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 1947
+        width: 210
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d0dcaa9ba4f4d4194bfebf372e29e7
+      internalID: 1282409142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlotTyrannosaurus
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1388
+        width: 990
+        height: 470
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3052e66cdfd0a4a8f2f71ff8a4a9ee
+      internalID: -1607348451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TriceratopsHead
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 908
+        width: 275
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db48aea55f1b9194891d997369e8d2dd
+      internalID: 1819091330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TriceratopsTop
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 760
+        width: 325
+        height: 440
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c12fabe45998f647992c68711d71d78
+      internalID: 327946126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TriceratopsBottom
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 762
+        width: 375
+        height: 435
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37bcb788a3163284b8a0aa9d8319ec9e
+      internalID: -728047198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlotTriceratops
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 98
+        width: 885
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db721726bfd26a4da3640969b8844bf
+      internalID: 255781671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StegosaurusHead
+      rect:
+        serializedVersion: 2
+        x: 2491
+        y: 1781
+        width: 165
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de732285af2aa54486ae4b134f21c66
+      internalID: -1765096849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StegosaurusTop
+      rect:
+        serializedVersion: 2
+        x: 2121
+        y: 1712
+        width: 320
+        height: 465
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175931a5c6fb51645a753cbdfe818338
+      internalID: -694171337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StegosaurusBottom
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 1679
+        width: 370
+        height: 510
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239ab1378bd2f8642bb4becd98ebf9f5
+      internalID: 44305233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StegosaurusTail
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 1782
+        width: 210
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb16b43311d9bd44bb04353b1b04330
+      internalID: -147188442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlotStegosaurus
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 1011
+        width: 950
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce822ec3b1a2deb4eb99ea453e29d317
+      internalID: -2029126494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrontosaurusBody
+      rect:
+        serializedVersion: 2
+        x: 1863
+        y: 359
+        width: 795
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 739074a777e1a0d41a58e5eaf8772238
+      internalID: -1002334266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrontosaurusFrontRight
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 708
+        width: 55
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6528186628af4d44c8d5f7d4ec71e07f
+      internalID: 438939886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrontosaurusFrontLeft
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 429
+        width: 100
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882da576a18858546a0b33a115641f23
+      internalID: 2113084077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrontosaurusBackLeft
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 454
+        width: 65
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c6293f99c7ff94488de7a73c3b9dcb
+      internalID: 936947965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrontosaurusBackRight
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 694
+        width: 75
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f279b49406cf674187b5618cd341af8
+      internalID: 198686178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrontosaurusTail
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 562
+        width: 285
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f113408a58d7d418276d408e82fb3a
+      internalID: 624552889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlotBrontosaurus
+      rect:
+        serializedVersion: 2
+        x: 2681
+        y: 284
+        width: 1095
+        height: 745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1a279ea27b42849ac637de107c94f6
+      internalID: 2023091970
       vertices: []
       indices: 
       edges: []
@@ -288,6 +918,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      BrontosaurusBackLeft: 936947965
+      BrontosaurusBackRight: 198686178
+      BrontosaurusBody: -1002334266
+      BrontosaurusFrontLeft: 2113084077
+      BrontosaurusFrontRight: 438939886
+      BrontosaurusTail: 624552889
       ButtonLevel: 1452075487
       ButtonNext: -1189086373
       ButtonPrevious: -1110343552
@@ -295,7 +931,32 @@ TextureImporter:
       Dinosaur Fossil Sprites Sheet_1: -599050203
       Dinosaur Fossil Sprites Sheet_2: -1982011736
       Dinosaur Fossil Sprites Sheet_3: -1756155270
+      Dinosaur Fossil Sprites Sheet_5: 1450993185
       LevelBarSlot: -347979301
+      Piece1: -754514380
+      Piece2: 778497065
+      Piece3: -547388492
+      Piece4: 1735995495
+      SlotBrontosaurus: 2023091970
+      SlotPiece1: 1725485268
+      SlotPiece2: -1126086290
+      SlotPiece3: -724681387
+      SlotPiece4: 365449131
+      SlotStegosaurus: -2029126494
+      SlotTriceratops: 255781671
+      SlotTyrannosaurus: -1607348451
+      StegosaurusBottom: 44305233
+      StegosaurusHead: -1765096849
+      StegosaurusTail: -147188442
+      StegosaurusTop: -694171337
+      TriceratopsBottom: -728047198
+      TriceratopsHead: 1819091330
+      TriceratopsTop: 327946126
+      TyrannosaurusBody: 1646698120
+      TyrannosaurusHead: 1282409142
+      TyrannosaurusLegs: -2097904254
+      TyrannosaurusTail: -1124627646
+      TyrannosaurusThighs: -425305088
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
