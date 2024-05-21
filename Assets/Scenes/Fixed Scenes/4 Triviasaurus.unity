@@ -394,6 +394,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 494762595, guid: 086ae2b1ef195ff47b8c253b38583a11, type: 3}
+    - target: {fileID: 2159173839539482693, guid: 7222ce341bc7ed44cac42b159dd95dbd, type: 3}
+      propertyPath: m_Name
+      value: Button Home
+      objectReference: {fileID: 0}
     - target: {fileID: 2989085564169138036, guid: 7222ce341bc7ed44cac42b159dd95dbd, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -558,6 +562,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 330849560, guid: 086ae2b1ef195ff47b8c253b38583a11, type: 3}
+    - target: {fileID: 7186955961323247329, guid: 7222ce341bc7ed44cac42b159dd95dbd, type: 3}
+      propertyPath: m_text
+      value: Home
+      objectReference: {fileID: 0}
     - target: {fileID: 7186955961323247329, guid: 7222ce341bc7ed44cac42b159dd95dbd, type: 3}
       propertyPath: m_fontColor.b
       value: 0.8196079
