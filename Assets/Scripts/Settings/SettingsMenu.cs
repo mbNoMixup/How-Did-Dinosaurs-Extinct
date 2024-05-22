@@ -14,7 +14,10 @@ public class SettingsMenu : MonoBehaviour
 
     void Start()
     {
-        resolutions = Screen.resolutions;
+        List<Resolution> availableResolutions = new List<Resolution>();
+        availableResolutions.Add(new Resolution { width = 1280, height = 720 });
+        availableResolutions.Add(new Resolution { width = 1920, height = 1080 });
+        resolutions = availableResolutions.ToArray();
 
         resolutionDropdown.ClearOptions();
 
