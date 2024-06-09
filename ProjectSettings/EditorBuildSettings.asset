@@ -39,6 +39,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Fixed Scenes/5-Level 6.unity
     guid: 3dc2a73a132d3b7458b6cf10743eb52e
   - enabled: 1
-    path: Assets/Scenes/Fixed Scenes/6 Settings.unity
+    path: Assets/Scenes/Fixed Scenes/6 Options.unity
     guid: 699816ae7d300a641a4ada48969f0997
   m_configObjects: {}
