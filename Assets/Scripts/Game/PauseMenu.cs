@@ -52,4 +52,20 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void NextLevel()
+    {
+        int nextLevelIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if (nextLevelIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            pauseMenuUI.SetActive(false);
+            Time.timeScale = 1f;
+            GameIsPaused = false;
+            SceneManager.LoadScene(nextLevelIndex);
+        }
+        else
+        {
+            Debug.Log("No more levels available.");
+        }
+    }
 }

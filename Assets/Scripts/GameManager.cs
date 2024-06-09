@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
             if (CheckLevelFinished())
             {
                 Debug.Log("LEVEL FINISHED");
-                // Call your transition manager here if needed
+                //Transition
             }
             else
             {
@@ -70,6 +70,21 @@ public class GameManager : MonoBehaviour
         if (puzzleFinishedObject != null)
         {
             puzzleFinishedObject.SetActive(true);
+            UnlockNewLevel();
         }
+    }
+
+    void UnlockNewLevel()
+    {
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (currentLevelIndex > PlayerPrefs.GetInt("ReachedIndex", 1))
+        {
+            PlayerPrefs.SetInt("ReachedIndex", currentLevelIndex);
+            PlayerPrefs.Save();
+        }
+
+        PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("ReachedIndex", 1));
+        PlayerPrefs.Save();
     }
 }

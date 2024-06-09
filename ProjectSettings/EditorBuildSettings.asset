@@ -4,5 +4,41 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Fixed Scenes/1 Main Menu.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Fixed Scenes/2 Rundown.unity
+    guid: 2d33c03e3ec6a8e4e8f0506dc9defe96
+  - enabled: 1
+    path: Assets/Scenes/Fixed Scenes/3 Dinotianary.unity
+    guid: 809f54b3cf018464ebfd4617132e9af4
+  - enabled: 1
+    path: Assets/Scenes/Fixed Scenes/4 Triviasaurus.unity
+    guid: 7d1e61593eb3fd24eb3a5a7f8a72f976
+  - enabled: 1
+    path: Assets/Scenes/Fixed Scenes/5 Fozzle Game.unity
+    guid: 8d3a719f9872a904eb2a76c3c14e5541
+  - enabled: 1
+    path: Assets/Scenes/Fixed Scenes/5-Level 1.unity
+    guid: 6ef61c42abfcb8a429a2c84b9031b366
+  - enabled: 1
+    path: Assets/Scenes/Fixed Scenes/5-Level 2.unity
+    guid: b28641dd65610d747b5c982d880aefc6
+  - enabled: 1
+    path: Assets/Scenes/Fixed Scenes/5-Level 3.unity
+    guid: 799d2cf2614804c4f980b0a10d346b50
+  - enabled: 1
+    path: Assets/Scenes/Fixed Scenes/5-Level 4.unity
+    guid: 143025bdbd610af4381a8bfc82b99324
+  - enabled: 1
+    path: Assets/Scenes/Fixed Scenes/5-Level 5.unity
+    guid: 094f1fa3ee2b4e3479843b57cf3f0660
+  - enabled: 1
+    path: Assets/Scenes/Fixed Scenes/5-Level 6.unity
+    guid: 3dc2a73a132d3b7458b6cf10743eb52e
+  - enabled: 1
+    path: Assets/Scenes/Fixed Scenes/6 Settings.unity
+    guid: 699816ae7d300a641a4ada48969f0997
   m_configObjects: {}
