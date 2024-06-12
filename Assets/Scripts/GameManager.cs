@@ -78,13 +78,17 @@ public class GameManager : MonoBehaviour
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
 
-        if (currentLevelIndex > PlayerPrefs.GetInt("ReachedIndex", 1))
+        int reachedIndex = PlayerPrefs.GetInt("ReachedIndex", 1);
+
+        int newReachedIndex = Mathf.Min(reachedIndex + 1, 6);
+
+        if (currentLevelIndex >= reachedIndex)
         {
-            PlayerPrefs.SetInt("ReachedIndex", currentLevelIndex);
+            PlayerPrefs.SetInt("ReachedIndex", newReachedIndex);
+
+            PlayerPrefs.SetInt("UnlockedLevel", newReachedIndex);
+
             PlayerPrefs.Save();
         }
-
-        PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("ReachedIndex", 1));
-        PlayerPrefs.Save();
     }
 }
