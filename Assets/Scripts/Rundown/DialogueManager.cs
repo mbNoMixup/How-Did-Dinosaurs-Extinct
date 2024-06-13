@@ -8,22 +8,20 @@ public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
-    public Queue<string> sentences;
+    public Queue<Dialogue.DialogueLine> dialogueLines;
 
     void Start()
     {
-        sentences = new Queue<string>();
+        dialogueLines = new Queue<Dialogue.DialogueLine>();
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
-        nameText.text = dialogue.name;
-        
-        sentences.Clear();
+        dialogueLines.Clear();
 
-        foreach (string sentence in dialogue.sentences)
+        foreach (Dialogue.DialogueLine line in dialogue.dialogueLines)
         {
-            sentences.Enqueue(sentence);
+            dialogueLines.Enqueue(line);
         }
 
         DisplayNextSentence();
@@ -31,18 +29,19 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if (sentences.Count == 0)
+        if (dialogueLines.Count == 0)
         {
             EndDialogue();
             return;
         }
 
-        string sentence = sentences.Dequeue();
+        Dialogue.DialogueLine line = dialogueLines.Dequeue();
+        nameText.text = line.speaker;
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        StartCoroutine(TypeSentence(line.sentence));
     }
 
-    IEnumerator TypeSentence (string sentence)
+    IEnumerator TypeSentence(string sentence)
     {
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())

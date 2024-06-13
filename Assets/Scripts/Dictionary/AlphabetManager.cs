@@ -8,7 +8,6 @@ public class AlphabetManager : MonoBehaviour
     public GameObject[] alphabetPanels;
     public Button[] alphabetButtons;
 
-    private int activePanelIndex = 0;
     private Button previousButton;
 
     private void Start()
