@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0707cba9edf4aa44f871835ce81f6457, type: 3}
+  m_Name: What is the name of the dinosaur that had a duck-billed appearance
+  m_EditorClassIdentifier: 
+  question: What is the name of the dinosaur that had a duck-billed appearance?
+  category: General
+  answers:
+  - Hadrosaurus
+  - Stegosaurus
+  - Triceratops
+  - Tyrannosaurus

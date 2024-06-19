@@ -1204,7 +1204,7 @@ PrefabInstance:
       objectReference: {fileID: 877418209}
     - target: {fileID: 6977639233861456849, guid: e520a160f4be419489809f1e4fe349c9, type: 3}
       propertyPath: timerDuration
-      value: 60
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 6977639233861456849, guid: e520a160f4be419489809f1e4fe349c9, type: 3}
       propertyPath: answerButtons.Array.data[0]
