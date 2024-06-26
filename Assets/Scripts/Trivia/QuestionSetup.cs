@@ -19,6 +19,13 @@ public class QuestionSetup : MonoBehaviour
     private TextMeshProUGUI timerText;
     [SerializeField]
     private AnswerButton[] answerButtons;
+
+    [SerializeField]
+    private AudioClip correctAnswerClip;
+    [SerializeField]
+    private AudioClip wrongAnswerClip;
+
+    private AudioSource audioSource;
     
     private int score = 0;
 
@@ -32,6 +39,11 @@ public class QuestionSetup : MonoBehaviour
 
     private bool questionsAvailable = true;
 
+    private Color defaultScoreColor;
+    private Color defaultTimerColor;
+    private Color flashColor = Color.red;
+    private Color correctColor = Color.green;
+
     private void Awake() 
     {
         GetQuestionAssets();    
@@ -39,6 +51,11 @@ public class QuestionSetup : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        
+        defaultScoreColor = scoreText.color;
+        defaultTimerColor = timerText.color;
+        
         SelectNewQuestion();
         SetQuestionValues();
         SetAnswerValues();
@@ -149,6 +166,13 @@ public class QuestionSetup : MonoBehaviour
             Debug.Log("CORRECT");
             score += 100;
             UpdateScoreText();
+            StartCoroutine(FlashScoreText(correctColor));
+
+            if (correctAnswerClip != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(correctAnswerClip);
+            }
+
             SelectNewQuestion();
             SetQuestionValues();
             SetAnswerValues();
@@ -158,6 +182,12 @@ public class QuestionSetup : MonoBehaviour
             Debug.Log("FALSE");
             currentTimer -= 10f;
             UpdateTimerText();
+            StartCoroutine(FlashTimerText(flashColor));
+
+            if (wrongAnswerClip != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(wrongAnswerClip);
+            }
         }
 
         if (questions.Count == 0)
@@ -205,5 +235,27 @@ public class QuestionSetup : MonoBehaviour
         int seconds = Mathf.FloorToInt(Mathf.Clamp(currentTimer % 60, 0, Mathf.Infinity));
 
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    private IEnumerator FlashTimerText(Color flashColor)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            timerText.color = flashColor;
+            yield return new WaitForSeconds(0.2f);
+            timerText.color = defaultTimerColor;
+            yield return new WaitForSeconds(0.2f);
+        }
+    }
+
+    private IEnumerator FlashScoreText(Color flashColor)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            scoreText.color = flashColor;
+            yield return new WaitForSeconds(0.2f);
+            scoreText.color = defaultScoreColor;
+            yield return new WaitForSeconds(0.2f);
+        }
     }
 }

@@ -7,6 +7,13 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 {
     public int id;
     public GameManager gameManager;
+    [SerializeField] private AudioClip correctPlaceSound;
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -20,11 +27,21 @@ public class ItemSlot : MonoBehaviour, IDropHandler
                 gameManager.PuzzlePiecePlaced();
                 eventData.pointerDrag.GetComponent<DragAndDrop>().SetPlaced(true);
                 eventData.pointerDrag.GetComponent<CanvasGroup>().alpha = 1f;
+
+                PlaySound(correctPlaceSound);
             }
             else
             {
                 eventData.pointerDrag.GetComponent<DragAndDrop>().ResetPosition();
             }
+        }
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (audioSource != null && clip != null)
+        {
+            audioSource.PlayOneShot(clip);
         }
     }
 
