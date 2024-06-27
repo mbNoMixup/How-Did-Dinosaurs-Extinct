@@ -414,6 +414,7 @@ GameObject:
   - component: {fileID: 8623756072165329281}
   - component: {fileID: 5955903192088690694}
   - component: {fileID: 6583007353961092324}
+  - component: {fileID: 4217445808912974240}
   m_Layer: 5
   m_Name: Dialogue Box
   m_TagString: Untagged
@@ -481,6 +482,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &4217445808912974240
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3175093053224763336}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d14e6ee83d852ad489e26f9e8e6c25e8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7857170466706187092
 GameObject:
   m_ObjectHideFlags: 0

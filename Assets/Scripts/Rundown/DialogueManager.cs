@@ -10,6 +10,8 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public Queue<Dialogue.DialogueLine> dialogueLines;
 
+    public Animator animator;
+
     void Start()
     {
         dialogueLines = new Queue<Dialogue.DialogueLine>();
@@ -17,6 +19,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        animator.SetBool("IsOpen", true);
+
         dialogueLines.Clear();
 
         foreach (Dialogue.DialogueLine line in dialogue.dialogueLines)
@@ -53,6 +57,6 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-
+        animator.SetBool("IsOpen", false);
     }
 }

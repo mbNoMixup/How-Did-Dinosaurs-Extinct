@@ -3824,6 +3824,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8623756072165329281, guid: 42ba78094a13916478450dfed988c553, type: 3}
   m_PrefabInstance: {fileID: 3517080211065366230}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &2141486989 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4217445808912974240, guid: 42ba78094a13916478450dfed988c553, type: 3}
+  m_PrefabInstance: {fileID: 3517080211065366230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3517080211065366230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3914,7 +3919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8623756072165329281, guid: 42ba78094a13916478450dfed988c553, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -167
+      value: -165
       objectReference: {fileID: 0}
     - target: {fileID: 8623756072165329281, guid: 42ba78094a13916478450dfed988c553, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3985,6 +3990,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 5217444937320162764, guid: 39645dc76a7f3af45aad3643475a82cb, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2141486989}
     - target: {fileID: 5217444937320162764, guid: 39645dc76a7f3af45aad3643475a82cb, type: 3}
       propertyPath: nameText
       value: 

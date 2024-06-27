@@ -7,13 +7,28 @@ using TMPro;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public AudioMixer audioMixer;
+    [SerializeField]
+    private AudioMixer masterMixer;
+    [SerializeField]
+    private Slider musicSlider;
+    [SerializeField]
+    private Slider SFXSlider;
 
     public TMPro.TMP_Dropdown resolutionDropdown;
     Resolution[] resolutions;
 
     void Start()
     {
+        if (PlayerPrefs.HasKey("musicVolume"))
+        {
+            LoadVolume();
+        }
+        else
+        {
+            SetMusicVolume();
+            SetSFXVolume();
+        }
+        
         List<Resolution> availableResolutions = new List<Resolution>();
         availableResolutions.Add(new Resolution { width = 1280, height = 720 });
         availableResolutions.Add(new Resolution { width = 1920, height = 1080 });
@@ -45,11 +60,6 @@ public class SettingsMenu : MonoBehaviour
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
-    
-    public void SetVolume(float volume)
-    {
-        audioMixer.SetFloat("volume", volume);
-    }
 
     public void SetQuality(int qualityIndex)
     {
@@ -59,5 +69,28 @@ public class SettingsMenu : MonoBehaviour
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+    }
+
+    public void SetMusicVolume()
+    {
+        float volume = musicSlider.value;
+        masterMixer.SetFloat("Music", Mathf.Log10(volume)*20);
+        PlayerPrefs.SetFloat("musicVolume", volume);
+    }
+
+    public void SetSFXVolume()
+    {
+        float volume = SFXSlider.value;
+        masterMixer.SetFloat("SFX", Mathf.Log10(volume)*20);
+        PlayerPrefs.SetFloat("SFXVolume", volume);
+    }
+
+    public void LoadVolume()
+    {
+        musicSlider.value = PlayerPrefs.GetFloat("musicVolume");
+        SFXSlider.value = PlayerPrefs.GetFloat("SFXVolume");
+
+        SetMusicVolume();
+        SetSFXVolume();
     }
 }
