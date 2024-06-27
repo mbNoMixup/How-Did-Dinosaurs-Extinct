@@ -16,9 +16,9 @@ public class TransitionLoader : MonoBehaviour
     //     }
     // }
 
-    public void LoadNextLevel()
+    public void LoadNextLevel(int buildIndex)
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        StartCoroutine(LoadLevel(buildIndex));
     }
 
     IEnumerator LoadLevel(int levelIndex)

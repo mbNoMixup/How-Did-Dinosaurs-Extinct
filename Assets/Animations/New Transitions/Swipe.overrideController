@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Swipe
+  m_Controller: {fileID: 9100000, guid: e04383a500ef2364896c891dddca8864, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: daf5128d860807445b3c9fa1136bb4c8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ed643b05d4e98b74d9a4bbd375527f96, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7588e42c09c04e04894fdf652d7fda5c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 55f0f1cb212079448b550039e22f1abe, type: 2}
