@@ -7,7 +7,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 {
     public int id;
     public GameManager gameManager;
-    [SerializeField] private AudioClip correctPlaceSound;
+    [SerializeField] private AudioSource correctPlaceSound;
     private AudioSource audioSource;
 
     private void Start()
@@ -28,7 +28,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
                 eventData.pointerDrag.GetComponent<DragAndDrop>().SetPlaced(true);
                 eventData.pointerDrag.GetComponent<CanvasGroup>().alpha = 1f;
 
-                PlaySound(correctPlaceSound);
+                PlaySound();
             }
             else
             {
@@ -37,11 +37,11 @@ public class ItemSlot : MonoBehaviour, IDropHandler
         }
     }
 
-    private void PlaySound(AudioClip clip)
+    private void PlaySound()
     {
-        if (audioSource != null && clip != null)
+        if (correctPlaceSound != null)
         {
-            audioSource.PlayOneShot(clip);
+            correctPlaceSound.Play();
         }
     }
 

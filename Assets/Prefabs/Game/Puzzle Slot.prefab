@@ -90,3 +90,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   gameManager: {fileID: 0}
+  correctPlaceSound: {fileID: 8300000, guid: e8f18937d8f728d4495248b590736e8e, type: 3}

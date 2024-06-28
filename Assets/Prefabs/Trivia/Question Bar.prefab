@@ -555,6 +555,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  correctAnswerClip: {fileID: 0}
+  wrongAnswerClip: {fileID: 0}
   timerDuration: 5
   correctAnswerChoice: 0
 --- !u!1 &3760322074875684951

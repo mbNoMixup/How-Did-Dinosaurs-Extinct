@@ -21,9 +21,9 @@ public class QuestionSetup : MonoBehaviour
     private AnswerButton[] answerButtons;
 
     [SerializeField]
-    private AudioClip correctAnswerClip;
+    private AudioSource correctAnswerClip;
     [SerializeField]
-    private AudioClip wrongAnswerClip;
+    private AudioSource wrongAnswerClip;
 
     private AudioSource audioSource;
     
@@ -168,9 +168,9 @@ public class QuestionSetup : MonoBehaviour
             UpdateScoreText();
             StartCoroutine(FlashScoreText(correctColor));
 
-            if (correctAnswerClip != null && audioSource != null)
+            if (correctAnswerClip != null)
             {
-                audioSource.PlayOneShot(correctAnswerClip);
+                correctAnswerClip.Play();
             }
 
             SelectNewQuestion();
@@ -184,9 +184,9 @@ public class QuestionSetup : MonoBehaviour
             UpdateTimerText();
             StartCoroutine(FlashTimerText(flashColor));
 
-            if (wrongAnswerClip != null && audioSource != null)
+            if (wrongAnswerClip != null)
             {
-                audioSource.PlayOneShot(wrongAnswerClip);
+                wrongAnswerClip.Play();
             }
         }
 

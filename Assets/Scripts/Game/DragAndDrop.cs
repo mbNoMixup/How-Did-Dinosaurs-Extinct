@@ -6,8 +6,8 @@ using UnityEngine.EventSystems;
 public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
     [SerializeField] private Canvas canvas;
-    [SerializeField] private AudioClip pickupSound;
-    [SerializeField] private AudioClip dropSound;
+    [SerializeField] private AudioSource pickupSound;
+    [SerializeField] private AudioSource dropSound;
     private AudioSource audioSource;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
@@ -29,7 +29,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         {
             canvasGroup.alpha = 0.6f;
             canvasGroup.blocksRaycasts = false;
-            PlaySound(pickupSound);
+            PlayPickUpSound();
         }
     }
 
@@ -47,7 +47,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         {
             canvasGroup.alpha = 1f;
             canvasGroup.blocksRaycasts = true;
-            PlaySound(dropSound);
+            PlayDropSound();
         }
     }
 
@@ -71,11 +71,19 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         isPlaced = placed;
     }
 
-    private void PlaySound(AudioClip clip)
+    private void PlayPickUpSound()
     {
-        if (audioSource != null && clip != null)
+        if (pickupSound != null)
         {
-            audioSource.PlayOneShot(clip);
+            pickupSound.Play();
+        }
+    }
+
+    private void PlayDropSound()
+    {
+        if (dropSound != null)
+        {
+            dropSound.Play();
         }
     }
 }
