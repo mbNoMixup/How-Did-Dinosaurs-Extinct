@@ -3207,6 +3207,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1825050929436794144, guid: 8bc75d25aca970d469b39cdd9430d899, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1747
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825050929436794144, guid: 8bc75d25aca970d469b39cdd9430d899, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3573578926889516200, guid: 8bc75d25aca970d469b39cdd9430d899, type: 3}
       propertyPath: m_Name
       value: TransitionLoader
