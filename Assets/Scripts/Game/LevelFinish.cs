@@ -20,23 +20,37 @@ public class LevelFinished : MonoBehaviour
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
         int nextLevelIndex = currentLevelIndex + 1;
 
-        if (nextLevelIndex <= 6)
+        int highestUnlockedLevel = PlayerPrefs.GetInt("HighestUnlockedLevel", 5);
+
+        if (nextLevelIndex <= 10)
         {
-            string nextLevelName = SceneUtility.GetScenePathByBuildIndex(nextLevelIndex);
-            string nextLevelNameFormatted = System.IO.Path.GetFileNameWithoutExtension(nextLevelName);
-            
-            if (!string.IsNullOrEmpty(nextLevelNameFormatted))
+            if (nextLevelIndex <= highestUnlockedLevel)
             {
-                SceneManager.LoadScene(nextLevelNameFormatted);
+                LoadLevel(nextLevelIndex);
             }
             else
             {
-                Debug.Log("Next level does not exist: " + nextLevelNameFormatted);
+                Debug.Log("NEXT LEVEL IS LOCKED");
             }
         }
         else
         {
-            Debug.Log("No more levels available.");
+            Debug.Log("NO MORE LEVELS");
+        }
+    }
+
+    private void LoadLevel(int levelIndex)
+    {
+        string nextLevelName = SceneUtility.GetScenePathByBuildIndex(levelIndex);
+        string nextLevelNameFormatted = System.IO.Path.GetFileNameWithoutExtension(nextLevelName);
+
+        if (!string.IsNullOrEmpty(nextLevelNameFormatted))
+        {
+            SceneManager.LoadScene(nextLevelNameFormatted);
+        }
+        else
+        {
+            Debug.Log("LEVEL DOES NOT EXIST: " + nextLevelNameFormatted);
         }
     }
 }

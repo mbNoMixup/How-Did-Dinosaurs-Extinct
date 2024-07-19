@@ -354,6 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69f35f9006f38954dbed4fa7096f3c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevels: 010000000200000003000000040000000500000006000000
 --- !u!1 &5370060452085007458
 GameObject:
   m_ObjectHideFlags: 0

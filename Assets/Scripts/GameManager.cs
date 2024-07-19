@@ -24,12 +24,10 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("ALL PIECES PLACED, CHECKING LEVEL");
             StartCoroutine(ShowPuzzleFinishedObject());
-            CheckLevelFinished();
-
             if (CheckLevelFinished())
             {
                 Debug.Log("LEVEL FINISHED");
-                //Transition
+                // Transition
             }
             else
             {
@@ -53,7 +51,6 @@ public class GameManager : MonoBehaviour
     public bool CheckLevelFinished()
     {
         Debug.Log("CHECKING LEVEL");
-
         foreach (ItemSlot slot in slots)
         {
             if (!slot.IsCorrectPuzzlePiece())
@@ -77,18 +74,20 @@ public class GameManager : MonoBehaviour
     void UnlockNewLevel()
     {
         int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        int highestUnlockedLevel = PlayerPrefs.GetInt("HighestUnlockedLevel", 5);
 
-        int reachedIndex = PlayerPrefs.GetInt("ReachedIndex", 1);
+        Debug.Log("CURRENT LEVEL: " + currentLevelIndex);
+        Debug.Log("HIGHEST UNLOCKED LEVEL: " + highestUnlockedLevel);
 
-        int newReachedIndex = Mathf.Min(reachedIndex + 1, 6);
-
-        if (currentLevelIndex >= reachedIndex)
+        if (currentLevelIndex >= highestUnlockedLevel)
         {
-            PlayerPrefs.SetInt("ReachedIndex", newReachedIndex);
-
-            PlayerPrefs.SetInt("UnlockedLevel", newReachedIndex);
-
-            PlayerPrefs.Save();
+            int newReachedIndex = currentLevelIndex + 1;
+            if (newReachedIndex <= 10) // Adjusted to 10 as the highest level index
+            {
+                PlayerPrefs.SetInt("HighestUnlockedLevel", newReachedIndex);
+                PlayerPrefs.Save();
+                Debug.Log("UNLOCKED NBEW LEVEL: " + newReachedIndex);
+            }
         }
     }
 }

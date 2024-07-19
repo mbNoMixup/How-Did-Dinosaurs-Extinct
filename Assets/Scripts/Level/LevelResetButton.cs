@@ -8,10 +8,9 @@ public class LevelResetButton : MonoBehaviour
 
     public void ResetUnlockedLevels()
     {
-        PlayerPrefs.SetInt("UnlockedLevel", 1);
-        PlayerPrefs.SetInt("ReachedIndex", 1);
+        PlayerPrefs.SetInt("HighestUnlockedLevel", 5);
         PlayerPrefs.Save();
-        Debug.Log("Unlocked Levels reset to 1");
+        Debug.Log("RESETED LEVELS");
 
         if (levelMenu != null)
         {
@@ -19,7 +18,7 @@ public class LevelResetButton : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("LevelMenu reference is not set");
+            Debug.LogWarning("LEVEL MENU NOT SET");
         }
     }
 }

@@ -16,13 +16,13 @@ public class LevelMenu : MonoBehaviour
 
     public void UpdateLevelButtons()
     {
-        int unlockedLevel = Mathf.Min(PlayerPrefs.GetInt("UnlockedLevel", 1), 6);
+        int highestUnlockedLevel = Mathf.Min(PlayerPrefs.GetInt("HighestUnlockedLevel", 5), 10);
         for (int i = 0; i < buttons.Length; i++)
         {
             buttons[i].interactable = false;
             SetTextAlpha(buttons[i], 0.5f);
         }
-        for (int i = 0; i < unlockedLevel && i < buttons.Length; i++)
+        for (int i = 0; i < highestUnlockedLevel - 4 && i < buttons.Length; i++)
         {
             buttons[i].interactable = true;
             SetTextAlpha(buttons[i], 1f);
